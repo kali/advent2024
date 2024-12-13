@@ -22,7 +22,6 @@ fn main() -> anyhow::Result<()> {
             // a * ay + b * by = y     ) - *ax
             // b * (bx * ay - ax * by) = x * ay - y * ax
             assert!(bx * ay != ax * by);
-            // b = (x * ay - y * ax) / (bx ay - ax by)
             let b = (x * ay - y * ax) / (bx * ay - ax * by);
             let a = (x - b * bx) / ax;
             if a * ax + b * bx == x
